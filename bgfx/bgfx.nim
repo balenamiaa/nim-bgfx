@@ -70,7 +70,7 @@ elif defined(BGFX_BUILD_LIB) or not defined(BGFX_DYNAMIC_LIB) or not defined(BGF
         {.passC: "-D_DEBUG -DBGFX_CONFIG_DEBUG=1".}
     {.passC: "-I/usr/local/include -DBX_CONFIG_ENABLE_MSVC_LEVEL4_WARNINGS=1 -D__STDC_LIMIT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_CONSTANT_MACROS".}
     when defined(BGFX_STATIC_LIBSTDCPP):
-        {.passL: "--static-libstdc++".}
+        {.passL: "-static-libstdc++".}
     else:
         {.passL: "-lstdc++".}
     when defined(linux):
